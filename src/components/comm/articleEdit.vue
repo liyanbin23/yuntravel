@@ -1,12 +1,22 @@
 <template>
   <div class="container">
-    <el-input v-model="title" size='medium'></el-input>
+    <label style="font-size:20px; margin: 20px auto;" for="title">
+      标题：
+    </label>
+      <el-input
+        v-model="title"
+        size="medium"
+        type="textarea"
+        label="title"
+        autosize
+        clearable="true"
+        style="width: 75%"
+      ></el-input>
     <quill-editor
       ref="myTextEditor"
       v-model="content"
       :options="editorOption"
-      style="height: 2000px; width:80%; margin-botton:40px;"
-
+      style="height: 2000px; width: 80%; margin: 20px auto 100px auto;"
     ></quill-editor>
   </div>
 </template>
@@ -34,8 +44,8 @@ export default {
 
 <style scoped lang='less'>
 .container {
-  margin: 10px 20px;
+  margin: 0 auto;
   position: relative;
-  align-content: center;
+  padding: 0 auto;
 }
 </style>

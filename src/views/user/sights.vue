@@ -5,6 +5,34 @@
       <el-row type="flex" :gutter="20">
         <el-col :span="20">
           <el-row type="flex" :gutter="20">
+            <el-col :span="13">
+              <el-menu
+                default-active="0"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleSelect"
+              >
+                <el-menu-item index="0">全部</el-menu-item>
+                <el-menu-item index="1">昆明</el-menu-item>
+                <el-menu-item index="2">大理</el-menu-item>
+                <el-menu-item index="3">丽江</el-menu-item>
+                <el-menu-item index="4">楚雄</el-menu-item>
+                <el-menu-item index="5">瑞丽</el-menu-item>
+                <el-menu-item index="6">西双版纳</el-menu-item>
+              </el-menu>
+            </el-col>
+            <el-col :span="10">
+              <el-input
+                v-model="context"
+                placeholder="搜索城市"
+                prefix-icon="el-icon-search"
+                clearable
+                @keyup.enter.native="search()"
+                style="margin:15px 20px auto auto;"
+              />
+            </el-col>
+          </el-row>
+          <el-row type="flex" :gutter="20">
             <waterfall :col="2" :data="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]">
               <template>
                 <div
@@ -34,7 +62,8 @@ export default {
     data () {
         return {
             data: [],
-            option: [{}]
+            option: [{}],
+            context: ''
         }
     },
     computed: {
@@ -49,12 +78,18 @@ export default {
     },
     // 下边的内容没有用到，需要的小伙伴可以看文档了解，如果需求后续回更新
     methods: {
+        handleSelect (key, keyPath) {
+            console.log(key, keyPath)
+        },
         scroll (scrollData) {
             console.log(scrollData)
         },
         switchCol (col) {
             this.col = col
             console.log(this.col)
+        },
+        search () {
+            this.searchContext = this.context
         },
         loadmore (index) {
             this.data = this.data.concat(this.data)
@@ -66,6 +101,7 @@ export default {
 .cont {
   width: 100%;
   height: auto;
+  background: #fff;
 }
 .content {
   margin-left: 1vw;

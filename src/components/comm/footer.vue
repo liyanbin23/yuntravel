@@ -3,7 +3,7 @@
     <div class="footer">
       <el-row class="info-list">
         <el-col :span="6" :offset="1">
-          <h5>旅想者旅游网</h5>
+          <h5>彩云之南旅游网</h5>
           <p>上亿旅行者共同打造的"旅行神器"</p>
           <p>
             <span>60,000</span> 多个全球旅游目的地
@@ -24,7 +24,6 @@
           <p>服务协议 游记协议</p>
           <p>商城平台服务协议</p>
           <p>网络信息侵权通知指引</p>
-          <p>闲云旅游旅游网服务监督员</p>
           <p>网站地图加入闲云旅游</p>
         </el-col>
         <el-col :span="5">
@@ -44,7 +43,7 @@
 
       <div
         class="licence"
-      >京ICP备08001421号 京公网安备110108007702 Copyright © 2016-2019 旅想者 All Rights Reserved</div>
+      >京ICP备08001421号 京公网安备110108007702 Copyright © 2016-2019 七彩云南 All Rights Reserved</div>
     </div>
   </div>
 </template>
@@ -58,7 +57,7 @@
 
 .footer {
   padding-top: 30px;
-  margin: 0 auto;
+  margin: 10px auto 0px auto;
   width: 1000px;
 }
 

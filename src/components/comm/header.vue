@@ -12,8 +12,9 @@
       <el-row type="flex" class="navs">
         <router-link to="/">首页</router-link>
         <router-link to="/sights">彩云之南</router-link>
-        <router-link to="/post">旅游攻略</router-link>
+        <router-link to="/strategy">旅游攻略</router-link>
         <router-link to="/hotel">酒店</router-link>
+        <router-link to="/mood">云南印象</router-link>
         <router-link to="/air">国内机票</router-link>
         <router-link to="/article">新建文章</router-link>
       </el-row>

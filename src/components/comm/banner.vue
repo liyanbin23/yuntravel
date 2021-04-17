@@ -30,7 +30,7 @@ export default {
   min-width: 1000px;
   margin: 0 auto;
   position: relative;
-
+  background: #fff;
   /deep/ .el-carousel__container {
     height: 300px;
 

@@ -5,6 +5,7 @@ import Login from '../views/user/login.vue'
 import Home from '../views/index.vue'
 import Sights from '../views/user/sights.vue'
 import Article from '../views/user/article.vue'
+import Strategy from '../views/user/strategy.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
         path: '/article',
         name: 'Article',
         component: Article
+    },
+    {
+        path: '/strategy',
+        name: 'Strategy',
+        component: Strategy
     }
     // {
     //   path: '/about',
